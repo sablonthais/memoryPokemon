@@ -1,0 +1,125 @@
+
+#container{
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*~ ABOUT THE HEADER********************************************* */
+
+#container header{
+    width: 100vw;
+    height: 30vh;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/*& ABOUT THE TITLE *****************/
+.title{
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+.memory-title{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(3, 3, 52);
+}
+
+
+/*& ABOUT THE RULES ******************/
+.reglesDuJeu{
+    width: 100%;
+    background-color: rgb(3, 3, 52);
+    border-radius: 15px;
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.reglesDuJeu h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}
+.reglesDuJeu p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+/*~ ABOUT THE GAMEBOARD********************************************** */
+.game-board{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+/*& ABOUT EVOLI (left ***************/
+.evoli-div{
+    width: 20%;
+    padding-left: 3%;
+    padding-top: 2%;
+}
+.evoli-img{
+    width: 90%;
+    object-fit: cover;
+}
+
+/*& ABOUT THE POKECARDS *************/
+.pokecards{
+    width: 75%;
+}
+#board{
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 4%;
+    padding-top: 3%;
+    padding-right: 2%;
+}
+
+.card{
+    height: 200px;
+    width: 150px;
+    position: relative;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: all 0.5s; /*todo on programme un transisiton qui dure 0.5sec*/
+}
+.card.visible{
+    transform: rotateY(180deg);/*todo la classe visible sera ajoutée dans le JS (classList.add)*/
+}
+.card-back, .card-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;/*todo on choisi qu'un coté soit invisible*/
+}
+.card-front{
+    background-color: rgb(3, 3, 52);
+    transform: rotateY(180deg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.card-back{
+    background-color: #cccfff;
+    cursor: pointer;
+}
